@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet">
+<style>
+    body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 10px 20px;
+}
+
+/* Bar Graph Vertical */
+.bar-graph .percentage {
+  -webkit-animation: fade-in-text 2.2s 0.1s backwards;
+  -moz-animation: fade-in-text 2.2s 0.1s backwards;
+  animation: fade-in-text 2.2s 0.1s backwards;
+}
+
+.bar-graph-vertical {
+  margin-top: 80px;
+  max-width: 680px;
+}
+
+.bar-graph-vertical .bar-container {
+  float: left;
+  height: 150px;
+  margin-right: 8px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+}
+
+.bar-graph-vertical .bar {
+  border-radius: 3px;
+  bottom: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.bar-graph-vertical .percentange {
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+
+
+.bar-graph-two .bar::after {
+  -webkit-animation: fade-in-text 2.2s 0.1s backwards;
+  -moz-animation: fade-in-text 2.2s 0.1s backwards;
+  animation: fade-in-text 2.2s 0.1s backwards;
+  color: #fff;
+  content: attr(data-percentage);
+  font-weight: 700;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  top: 24px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.bar-graph-two .bar-one .bar {
+  background-color: #64b2d1;
+  -webkit-animation: show-bar-one-vertical 1.2s 0.1s backwards;
+  -moz-animation: show-bar-one-vertical 1.2s 0.1s backwards;
+  animation: show-bar-one-vertical 1.2s 0.1s backwards;
+}
+
+.bar-graph-two .bar-two .bar {
+  background-color: #5292ac;
+  -webkit-animation: show-bar-two-vertical 1.2s 0.2s backwards;
+  -moz-animation: show-bar-two-vertical 1.2s 0.2s backwards;
+  animation: show-bar-two-vertical 1.2s 0.2s backwards;
+}
+
+.bar-graph-two .bar-three .bar {
+  background-color: #407286;
+  -webkit-animation: show-bar-three-vertical 1.2s 0.3s backwards;
+  -moz-animation: show-bar-three-vertical 1.2s 0.3s backwards;
+  animation: show-bar-three-vertical 1.2s 0.3s backwards;
+}
+
+
+/* Bar Graph Vertical Animations */
+@-webkit-keyframes show-bar-one-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 30%;
+  }
+}
+
+@-webkit-keyframes show-bar-two-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 40%;
+  }
+}
+
+@-webkit-keyframes show-bar-three-vertical {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 80%;
+  }
+}
+
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
+</head>
+<body>
+<section class="bar-graph bar-graph-vertical bar-graph-two">
+    <div class="bar-one bar-container">
+      <div class="bar" data-percentage="30%"></div>
+    </div>
+    <div class="bar-two bar-container">
+      <div class="bar" data-percentage="40%"></div>
+    </div>
+    <div class="bar-three bar-container">
+        <div class="bar" data-percentage="40%"></div>
+    </div>
+    
+   </div>
+  </section>
+  <p>Bar Plot</p>
+</body>
+</html>
